@@ -8,6 +8,12 @@
 ## Predefined Themes
 
 - Docs: [Click here](https://sandpack.codesandbox.io/docs/advanced-usage#sandpackpredefinedtheme)
-- Sarah Drasner's wonderful `Night Owl`: [Click here](https://github.com/sdras/night-owl-vscode-theme)
 - Sandpack Theme Builder - [Click here](https://sandpack.codesandbox.io/theme)
+- Sarah Drasner's wonderful `Night Owl`: [Click here](https://github.com/sdras/night-owl-vscode-theme)
 
+## Editor?
+
+- CodeMirror: [Click here](https://codemirror.net/)
+- Monaco: [Click here](https://microsoft.github.io/monaco-editor/)
+
+Default editor used is `CodeMirror` but you can switch to `Monaco` by following this site: [Click here](https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor)
