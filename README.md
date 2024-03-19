@@ -16,4 +16,10 @@
 - CodeMirror: [Click here](https://codemirror.net/)
 - Monaco: [Click here](https://microsoft.github.io/monaco-editor/)
 
-Default editor used is `CodeMirror` but you can switch to `Monaco` by following this site: [Click here](https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor)
+Default editor in `sandpack-react` used is `CodeMirror` but you can switch to `Monaco` by following this section in docs: [Click here](https://sandpack.codesandbox.io/docs/guides/integrate-monaco-editor)
+
+
+## Other Custom Features ?
+
+<img src="./images/img1.jpeg" width="600"> 
+<img src="./images/img2.jpeg" width="600"> 
