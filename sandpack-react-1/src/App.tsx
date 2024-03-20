@@ -89,6 +89,34 @@ export const Basic4 = () => {
   )
 }
 
+export const Basic3 = () => {
+  // When we use <SandpackProvider/> we need to use use `editorHeight` like that:
+  const editorHeight = 'auto'
+  return (
+    <div>
+      <h1>Basic 3 - Show Active File, Using custom refresh button, Hide Default Refresh, Hide <code>Open in CodeSandbox</code> Buttons</h1>
+      <SandpackProvider
+        template="react"
+        files={{
+          '/App.js': `export default function App(){
+  return <div>Hello world</div>
+}`,
+          '/Button.js': 'export default function Button(){}',
+          '/Card.js': 'export default function Card(){}',
+        }}
+      >
+        <ActiveFileDisplay /> {/* This displays the active file path. */}
+        <SandpackLayout style={{ border: '1px solid red' }}>
+          <CustomRefreshButton />
+          <SandpackCodeEditor style={{ height: editorHeight }} />
+          {/* Hide the default buttons */}
+          <SandpackPreview showOpenInCodeSandbox={false} showRefreshButton={false} style={{ height: editorHeight }} />
+        </SandpackLayout>
+      </SandpackProvider>
+    </div>
+  )
+}
+
 export const Basic = () => {
   return (
     <>
@@ -134,6 +162,22 @@ h1 {
 `.trim(),
 };
 
+export const Basic2 = () => {
+  return (
+    <div>
+      <h1>Basic 2 - Show Preview below the CodeEditor</h1>
+      <SandpackProvider template="react" files={files} >
+        <SandpackLayout style={{ border: '1px solid red' }}>
+          <div style={{ width: '100%' }}>
+            <SandpackCodeEditor />
+            <SandpackPreview />
+          </div>
+        </SandpackLayout>
+      </SandpackProvider>
+    </div>
+  )
+}
+
 export const Basic1 = () => {
   return <div>
     <h1>Basic 1 - Using custom files</h1>
@@ -146,48 +190,4 @@ export const Basic1 = () => {
       }}
     />
   </div>
-}
-
-export const Basic2 = () => {
-  return (
-    <div>
-      <h1>Basic 2 - Show Preview below the CodeEditor</h1>
-      <SandpackProvider template="react" files={files} >
-        <SandpackLayout style={{ border: '2px solid red' }}>
-          <div style={{ width: '100%' }}>
-            <SandpackCodeEditor />
-            <SandpackPreview />
-          </div>
-        </SandpackLayout>
-      </SandpackProvider>
-    </div>
-  )
-}
-
-export const Basic3 = () => {
-  // When we use <SandpackProvider/> we need to use use `editorHeight` like that:
-  const editorHeight = 'auto'
-  return (
-    <div>
-      <h1>Basic 3 - Show Active File, Using custom refresh button, Hide Default Refresh, Hide <code>Open in CodeSandbox</code> Buttons</h1>
-      <SandpackProvider
-        template="react"
-        files={{
-          '/App.js': `export default function App(){
-  return <div>Hello world</div>
-}`,
-          '/Button.js': 'export default function Button(){}',
-          '/Card.js': 'export default function Card(){}',
-        }}
-      >
-        <ActiveFileDisplay /> {/* This displays the active file path. */}
-        <SandpackLayout style={{ border: '2px solid red' }}>
-          <CustomRefreshButton />
-          <SandpackCodeEditor style={{ height: editorHeight }} />
-          {/* Hide the default buttons */}
-          <SandpackPreview showOpenInCodeSandbox={false} showRefreshButton={false} style={{ height: editorHeight }} />
-        </SandpackLayout>
-      </SandpackProvider>
-    </div>
-  )
 }

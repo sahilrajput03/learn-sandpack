@@ -1,6 +1,7 @@
 # Learn `sandpack-react` 
 
-**TODO: Check how to use dependencies with codesandbox by passing dependecies name**
+**View Live: [Click here](https://learn-sandpack.vercel.app/)**
+
 - Awesome Docs: Usage of sandpack: [Click here](https://sandpack.codesandbox.io/docs/getting-started/usage#dependencies)
 - Source - A World-Class Code Playground with Sandpack by Josh W. Comeau [Click here](https://www.joshwcomeau.com/react/next-level-playground/)
 - Docs - Sandpack React: [Click here](https://sandpack.codesandbox.io/docs)
