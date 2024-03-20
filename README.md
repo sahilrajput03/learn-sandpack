@@ -2,6 +2,8 @@
 
 **View Live: [Click here](https://learn-sandpack.vercel.app/)**
 
+NOTE: In conosle there is an error like - `Service Worker registration failed: TypeError #1091` - You can track this [issue here](https://github.com/codesandbox/sandpack/issues/1091).
+
 - Awesome Docs: Usage of sandpack: [Click here](https://sandpack.codesandbox.io/docs/getting-started/usage#dependencies)
 - Source - A World-Class Code Playground with Sandpack by Josh W. Comeau [Click here](https://www.joshwcomeau.com/react/next-level-playground/)
 - Docs - Sandpack React: [Click here](https://sandpack.codesandbox.io/docs)

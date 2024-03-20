@@ -38,7 +38,8 @@ export const Basic5 = () => {
           // Note: Value of `editorWidthPercentage` only updates in sandpack if we completely refresh the page using browser refresh or ctrl+r or F5 key
           editorWidthPercentage: 60, // default - 50
           showTabs: true, // By defautl tabs are only shown if there are more than 1 file
-          showConsole: true, // default - false
+          // Note to Sahil: Currently it shows some error i.e, service worked not registered, please check readme file for the issue opened by a user on sandpack's official repository.
+          // showConsole: true, // default - false
         }}
         files={{
           "/App.js": `
