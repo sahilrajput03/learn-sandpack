@@ -11,9 +11,11 @@ export default function App() {
       <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
 
       <Basic5 />
+      <Basic41 />
       <Basic4 />
       <Basic3 />
       <Basic2 />
+      <Basic11 />
       <Basic1 />
       <Basic />
     </div>
@@ -45,7 +47,7 @@ export const Basic5 = () => {
           "/App.js": `
 import ReactMarkdown from 'react-markdown' 
 import { DateTime } from 'luxon';
-var _ = require('lodash');
+import _ from 'lodash'
 
 export default function App() {
   return (
@@ -72,6 +74,58 @@ export default function App() {
             "lodash": "latest",
           }
         }} />
+    </>
+  )
+}
+
+export const Basic41 = () => {
+  return (
+    <>
+      <h1>Basic 4.1 - Static Template with custom code</h1>
+      <Sandpack
+        template="static"
+        options={{
+          editorHeight: 'auto'
+        }}
+        files={{
+          '/index.html': `
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <h1>Heading 1</h1>
+  <em>Emphasized text.</em>
+  <mark>Highlighted text.</mark>
+  <s>Striked text.</s>
+  <small>Small text.</small>
+  <strong>Strong or bold text.</strong>
+  <sub>Subscript text.</sub>
+  <sup>Superscript text.</sup>
+  <div class="magic-text">I love this world!</div>
+
+  <style>
+    @keyframes colorChange {
+      0% { color: red; background: black; }
+      20% { color: white; background: red; }
+      40% { color: blue; background: orange; }
+      60% { color: white; background: pink; }
+    }
+    .magic-text {
+      animation: colorChange 1s infinite;
+    }
+  </style>
+</body>
+  
+</html>
+          `.trim()
+        }}
+      />
     </>
   )
 }
@@ -115,21 +169,6 @@ export const Basic3 = () => {
         </SandpackLayout>
       </SandpackProvider>
     </div>
-  )
-}
-
-export const Basic = () => {
-  return (
-    <>
-      <h1>Basic</h1>
-      <Sandpack
-        template="react"
-        options={{
-          // showConsole: true, // default: false
-          editorHeight: 'auto'
-        }}
-      />
-    </>
   )
 }
 
@@ -179,9 +218,22 @@ export const Basic2 = () => {
   )
 }
 
+export const Basic11 = () => {
+  return <div>
+    <h1>Basic 1.1 - Template <i>react-ts</i></h1>
+    <Sandpack
+      template="react-ts"
+      theme={nightOwl}
+      options={{
+        editorHeight: 'auto'
+      }}
+    />
+  </div>
+}
+
 export const Basic1 = () => {
   return <div>
-    <h1>Basic 1 - Using custom files</h1>
+    <h1>Basic 1 - Template <i>react</i> using custom files</h1>
     <Sandpack
       template="react"
       files={files}
@@ -191,4 +243,19 @@ export const Basic1 = () => {
       }}
     />
   </div>
+}
+
+export const Basic = () => {
+  return (
+    <>
+      <h1>Basic - Template <i>react</i></h1>
+      <Sandpack
+        template="react"
+        options={{
+          // showConsole: true, // default: false
+          editorHeight: 'auto'
+        }}
+      />
+    </>
+  )
 }
