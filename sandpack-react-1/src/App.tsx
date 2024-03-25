@@ -3,21 +3,31 @@ import { Sandpack, SandpackCodeEditor, SandpackLayout, SandpackPreview, Sandpack
 import { nightOwl } from "@codesandbox/sandpack-themes";
 import { ActiveFileDisplay } from './components/ActiveFileDisplay';
 import CustomRefreshButton from './components/CustomRefreshButton';
+import { useState } from 'react';
 
 export default function App() {
+  const [isBasicFirst, setIsBasicFirst] = useState(true)
+  const toggleBasicFirst = () => setIsBasicFirst(!isBasicFirst)
+
+  const comps = [
+    <Basic5 />,
+    <Basic41 />,
+    <Basic4 />,
+    <Basic3 />,
+    <Basic2 />,
+    <Basic11 />,
+    <Basic1 />,
+    <Basic />,
+  ]
+
   return (
     <div>
       <h1>Learn <code>sandpack-react</code></h1>
       <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
 
-      <Basic5 />
-      <Basic41 />
-      <Basic4 />
-      <Basic3 />
-      <Basic2 />
-      <Basic11 />
-      <Basic1 />
-      <Basic />
+      <button onClick={toggleBasicFirst}>{isBasicFirst ? 'Show complex examples first' : 'Show basic example first'}</button>
+
+      {isBasicFirst ? comps.reverse() : comps}
     </div>
   )
 }
@@ -25,7 +35,7 @@ export default function App() {
 export const Basic5 = () => {
   return (
     <>
-      <h1>Basic 5 - Using external dependencies</h1>
+      <h1>Basic 5 - With external dependencies</h1>
       <p> Docs: <a target='_blank' href="https://sandpack.codesandbox.io/docs/getting-started/usage#dependencies">Click here</a> </p>
       <p>Below sandpack instance shows use of <code>showLineNumbers</code>, <code>showInlineErrors</code>, <code>wrapContent</code>, <code>editorHeight</code>, <code>editorWidthPercentage</code>, <code>showTabs</code> and <code>showConsole</code>.</p>
       <Sandpack
@@ -149,7 +159,7 @@ export const Basic3 = () => {
   const editorHeight = 'auto'
   return (
     <div>
-      <h1>Basic 3 - Show Active File, Using custom refresh button, Hide Default Refresh, Hide <code>Open in CodeSandbox</code> Buttons</h1>
+      <h1>Basic 3 - Show Active File, with custom refresh button, Hide Default Refresh, Hide <code>Open in CodeSandbox</code> Buttons</h1>
       <SandpackProvider
         template="react"
         files={{
@@ -233,7 +243,7 @@ export const Basic11 = () => {
 
 export const Basic1 = () => {
   return <div>
-    <h1>Basic 1 - Template <i>react</i> using custom files</h1>
+    <h1>Basic 1 - Template <i>react</i> with custom files</h1>
     <Sandpack
       template="react"
       files={files}
