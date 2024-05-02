@@ -24,6 +24,7 @@ export default function App() {
     <div>
       <h1>Learn <code>sandpack-react</code></h1>
       <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
+      <p>View code of below sandboxes: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack/tree/main?tab=readme-ov-file'>Click here</a></p>
 
       <button onClick={toggleBasicFirst}>{isBasicFirst ? 'Show complex examples first' : 'Show basic example first'}</button>
 
