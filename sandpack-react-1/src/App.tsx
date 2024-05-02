@@ -262,8 +262,12 @@ export const Basic = () => {
       <Sandpack
         template="react"
         options={{
-          // showConsole: true, // default: false
-          editorHeight: 'auto'
+          // Show console by using `true` value (default: false)
+          // showConsole: true,
+          // Set editor height, (default: 300)
+          editorHeight: 'auto',
+          // Editor Width Percentage default: 50
+          // editorWidthPercentage: 80,
         }}
       />
     </>
