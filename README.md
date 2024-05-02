@@ -1,6 +1,8 @@
 # Learn `sandpack-react` 
 
-**View Live: [Click here](https://learn-sandpack.vercel.app/)**
+**Quick Links:**
+- View Code of Sandpacks used: [Click here](https://github.com/sahilrajput03/learn-sandpack/blob/main/sandpack-react-1/src/App.tsx)
+- **View Live @ [https://learn-sandpack.vercel.app](https://learn-sandpack.vercel.app/)**
 
 NOTE: In console there is an error like - `Service Worker registration failed: TypeError #1091` - You can track this [issue here](https://github.com/codesandbox/sandpack/issues/1091).
 
