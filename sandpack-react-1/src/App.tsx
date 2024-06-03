@@ -4,29 +4,34 @@ import { nightOwl } from "@codesandbox/sandpack-themes";
 import { ActiveFileDisplay } from './components/ActiveFileDisplay';
 import CustomRefreshButton from './components/CustomRefreshButton';
 import { useState } from 'react';
+import { Angular1 } from './AngularSandpacks';
+
+const IntroText = ({ toggleBasicFirst, isBasicFirst }: any) => <div>
+      <h1>Learn <code>sandpack-react</code></h1>
+      <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
+      <p>View code of below sandboxes: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack/blob/main/sandpack-react-1/src/App.tsx'>Click here</a></p>
+      <button onClick={toggleBasicFirst}>{isBasicFirst ? 'Show complex examples first' : 'Show basic example first'}</button>
+</div>
 
 export default function App() {
   const [isBasicFirst, setIsBasicFirst] = useState(true)
   const toggleBasicFirst = () => setIsBasicFirst(!isBasicFirst)
 
   const comps = [
-    <Basic5 />,
-    <Basic41 />,
-    <Basic4 />,
-    <Basic3 />,
-    <Basic2 />,
-    <Basic11 />,
-    <Basic1 />,
-    <Basic />,
+    <Angular1 />,
+    // <Basic5 />,
+    // <Basic41 />,
+    // <Basic4 />,
+    // <Basic3 />,
+    // <Basic2 />,
+    // <Basic11 />,
+    // <Basic1 />,
+    // <Basic />,
   ]
 
   return (
     <div>
-      <h1>Learn <code>sandpack-react</code></h1>
-      <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
-      <p>View code of below sandboxes: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack/blob/main/sandpack-react-1/src/App.tsx'>Click here</a></p>
-
-      <button onClick={toggleBasicFirst}>{isBasicFirst ? 'Show complex examples first' : 'Show basic example first'}</button>
+      {/* <IntroText toggleBasicFirst={toggleBasicFirst} isBasicFirst={isBasicFirst} /> */}
 
       {isBasicFirst ? comps.reverse() : comps}
     </div>
