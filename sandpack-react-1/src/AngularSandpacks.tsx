@@ -30,6 +30,7 @@ export class AppComponent {
       theme="light" 
       template="angular"
     >
+      <h1>Angular Example 1</h1>
         <ActiveFileDisplay /> {/* This displays the active file path. */}
         <SandpackLayout >
             <SandpackFileExplorer />

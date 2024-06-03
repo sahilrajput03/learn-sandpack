@@ -19,19 +19,19 @@ export default function App() {
 
   const comps = [
     <Angular1 />,
-    // <Basic5 />,
-    // <Basic41 />,
-    // <Basic4 />,
-    // <Basic3 />,
-    // <Basic2 />,
-    // <Basic11 />,
-    // <Basic1 />,
-    // <Basic />,
+    <Basic5 />,
+    <Basic41 />,
+    <Basic4 />,
+    <Basic3 />,
+    <Basic2 />,
+    <Basic11 />,
+    <Basic1 />,
+    <Basic />,
   ]
 
   return (
     <div>
-      {/* <IntroText toggleBasicFirst={toggleBasicFirst} isBasicFirst={isBasicFirst} /> */}
+      <IntroText toggleBasicFirst={toggleBasicFirst} isBasicFirst={isBasicFirst} />
 
       {isBasicFirst ? comps.reverse() : comps}
     </div>
