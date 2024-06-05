@@ -23,21 +23,21 @@ export class AppComponent {
     <div><button (click)='clickFunction()'>Click Me</button></div>
     `.trim()
   }
-  
+
   return (
     <SandpackProvider
-      files={files} 
-      theme="light" 
+      files={files}
+      theme="light"
       template="angular"
     >
       <h1>Angular Example 1</h1>
-        <ActiveFileDisplay /> {/* This displays the active file path. */}
-        <SandpackLayout >
-            <SandpackFileExplorer />
-          <SandpackCodeEditor showTabs />
-          <SandpackPreview showOpenInCodeSandbox={false} showRefreshButton={true} />
-        </SandpackLayout>
+      <ActiveFileDisplay /> {/* This displays the active file path. */}
+      <SandpackLayout>
+        <SandpackFileExplorer />
+        <SandpackCodeEditor showTabs />
+        <SandpackPreview showOpenInCodeSandbox={false} showRefreshButton={true} />
+      </SandpackLayout>
 
-        </SandpackProvider>
-  )  
+    </SandpackProvider>
+  )
 }

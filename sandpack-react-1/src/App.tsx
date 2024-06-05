@@ -1,5 +1,5 @@
 import './App.css'
-import { Sandpack, SandpackCodeEditor, SandpackLayout, SandpackPreview, SandpackProvider } from '@codesandbox/sandpack-react';
+import { Sandpack, SandpackCodeEditor, SandpackFileExplorer, SandpackLayout, SandpackPreview, SandpackProvider } from '@codesandbox/sandpack-react';
 import { nightOwl } from "@codesandbox/sandpack-themes";
 import { ActiveFileDisplay } from './components/ActiveFileDisplay';
 import CustomRefreshButton from './components/CustomRefreshButton';
@@ -7,10 +7,10 @@ import { useState } from 'react';
 import { Angular1 } from './AngularSandpacks';
 
 const IntroText = ({ toggleBasicFirst, isBasicFirst }: any) => <div>
-      <h1>Learn <code>sandpack-react</code></h1>
-      <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
-      <p>View code of below sandboxes: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack/blob/main/sandpack-react-1/src/App.tsx'>Click here</a></p>
-      <button onClick={toggleBasicFirst}>{isBasicFirst ? 'Show complex examples first' : 'Show basic example first'}</button>
+  <h1>Learn <code>sandpack-react</code></h1>
+  <p>Source: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack'>github.com/sahilrajput03/learn-sandpack</a></p>
+  <p>View code of below sandboxes: <a target='_blank' href='https://github.com/sahilrajput03/learn-sandpack/blob/main/sandpack-react-1/src/App.tsx'>Click here</a></p>
+  <button onClick={toggleBasicFirst}>{isBasicFirst ? 'Show complex examples first' : 'Show basic example first'}</button>
 </div>
 
 export default function App() {
@@ -24,6 +24,8 @@ export default function App() {
     <Basic4 />,
     <Basic3 />,
     <Basic2 />,
+    <Basic13 />,
+    <Basic12 />,
     <Basic11 />,
     <Basic1 />,
     <Basic />,
@@ -165,7 +167,7 @@ export const Basic3 = () => {
   const editorHeight = 'auto'
   return (
     <div>
-      <h1>Basic 3 - Show Active File, with custom refresh button, Hide Default Refresh, Hide <code>Open in CodeSandbox</code> Buttons</h1>
+      <h1>Basic 3 - Show Active File, custom refresh button, hide default refresh, hide <code>Open in CodeSandbox</code> Buttons</h1>
       <SandpackProvider
         template="react"
         files={{
@@ -225,9 +227,45 @@ export const Basic2 = () => {
       <SandpackProvider template="react" files={files} >
         <SandpackLayout style={{ border: '1px solid red' }}>
           <div style={{ width: '100%' }}>
+            <SandpackFileExplorer />
             <SandpackCodeEditor />
             <SandpackPreview />
           </div>
+        </SandpackLayout>
+      </SandpackProvider>
+    </div>
+  )
+}
+
+export const Basic13 = () => {
+  return (
+    <div>
+      <h1>Basic 1.3 - Show File exporer with custom files</h1>
+      <SandpackProvider
+        template="react"
+        files={files}
+      >
+        <SandpackLayout>
+          <SandpackFileExplorer />
+          <SandpackCodeEditor />
+          <SandpackPreview />
+        </SandpackLayout>
+      </SandpackProvider>
+    </div>
+  )
+}
+
+export const Basic12 = () => {
+  return (
+    <div>
+      <h1>Basic 1.2 - Show File exporer</h1>
+      <SandpackProvider
+        template="react"
+      >
+        <SandpackLayout>
+          <SandpackFileExplorer />
+          <SandpackCodeEditor />
+          <SandpackPreview />
         </SandpackLayout>
       </SandpackProvider>
     </div>
